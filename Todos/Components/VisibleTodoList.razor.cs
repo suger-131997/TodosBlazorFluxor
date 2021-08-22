@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Todos.Enums;
-using Todos.Model;
+using Todos.Models;
 using Todos.Store.TodosUseCase;
 using Todos.Store.VisibilityFilterUseCase;
 

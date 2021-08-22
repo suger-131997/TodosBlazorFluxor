@@ -1,6 +1,6 @@
 ﻿using Fluxor;
 using System.Collections.Generic;
-using Todos.Model;
+using Todos.Models;
 
 namespace Todos.Store.TodosUseCase
 {

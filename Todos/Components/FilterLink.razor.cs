@@ -8,10 +8,10 @@ namespace Todos.Components
     public partial class FilterLink
     {
         [Parameter]
-        public VisibilityFilterType FilterType { get; set; }
+        public RenderFragment ChildContent { get; set; }
 
         [Parameter]
-        public RenderFragment ChildContent { get; set; }
+        public VisibilityFilterType FilterType { get; set; }
 
         [Inject]
         private IState<VisibilityFilterState> VisibilityFilterState { get; set; }

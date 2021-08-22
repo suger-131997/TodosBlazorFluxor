@@ -1,7 +1,7 @@
 ﻿using Fluxor;
 using Microsoft.AspNetCore.Components;
 using System.Collections.Generic;
-using Todos.Model;
+using Todos.Models;
 using Todos.Store.TodosUseCase;
 
 namespace Todos.Components
