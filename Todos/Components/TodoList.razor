@@ -1,0 +1,6 @@
+﻿<ul>
+    @foreach (var todo in Todos)
+    {
+        <Todo Text=@todo.Text Completed=@todo.Compleated OnClickMethod="@(() => OnClickMethod.InvokeAsync(todo.Id))" />
+    }
+</ul>
