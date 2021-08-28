@@ -27,18 +27,18 @@ namespace Todos.Components
             Dispatcher.Dispatch(action);
         }
 
-        private IEnumerable<TodoItem> VisibleTodos(IEnumerable<TodoItem> todos, VisibilityFilterType filterType)
+        private IEnumerable<TodoItem> VisibleTodos()
         {
-            switch (filterType)
+            switch (VisibilityFilterState.Value.FilterType)
             {
                 case VisibilityFilterType.ShowAll:
-                    return todos;
+                    return TodosState.Value.Todos;
                 case VisibilityFilterType.ShowCompleted:
-                    return todos.Where(value => value.Compleated);
+                    return TodosState.Value.Todos.Where(value => value.Compleated);
                 case VisibilityFilterType.ShowActive:
-                    return todos.Where(value => !value.Compleated);
+                    return TodosState.Value.Todos.Where(value => !value.Compleated);
                 default:
-                    throw new Exception("Unknown filter: " + filterType);
+                    throw new Exception("Unknown filter: " + VisibilityFilterState.Value.FilterType);
             }
         }
     }
